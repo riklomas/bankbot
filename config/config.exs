@@ -14,8 +14,8 @@ config :bankbot, Bankbot.Endpoint,
   pubsub: [name: Bankbot.PubSub,
            adapter: Phoenix.PubSub.PG2],
   wit_key: "B3FMD4UOBTNE4X7AIZLMUO7HY4EBXQDD",
-  nexmo_key: "",
-  nexmo_secret: ""
+  nexmo_key: "c71c9126",
+  nexmo_secret: "256cafd12fc50eac"
 
 # Configures Elixir's Logger
 config :logger, :console,

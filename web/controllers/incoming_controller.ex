@@ -1,7 +1,7 @@
 defmodule Bankbot.IncomingController do
   use Bankbot.Web, :controller
 
-  def create(conn, %{"msisdn" => number, "text" => message}) do
+  def index(conn, %{"msisdn" => number, "text" => message}) do
     
     teller_message = case Wit.request(message) do
       {:message, message, ctx}    -> message             

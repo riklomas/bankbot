@@ -17,9 +17,6 @@ defmodule Bankbot.Nexmo do
     nexmo_url = "https://rest.nexmo.com/sms/json?" <> Enum.join(query, "&")
 
     HTTPoison.start
-    case HTTPoison.get(nexmo_url) do
-      {:ok, %HTTPoison.Response{status_code: 200, body: body}} -> {:ok, user}
-      _ -> {:error, user}
-    end
+    HTTPoison.get(nexmo_url)
   end
 end

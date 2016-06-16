@@ -15,7 +15,8 @@ defmodule Bankbot.Router do
 
   scope "/", Bankbot do
     pipe_through :browser # Use the default browser stack
-
+    
+    resources "/incoming", IncomingController, only: [:create]
     get "/", PageController, :index
   end
 

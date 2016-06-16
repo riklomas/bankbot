@@ -9,7 +9,7 @@ defmodule Bankbot.IncomingController do
       {:action, "balance", ctx}   -> "Your balance is £4,506"
       {:action, "statement", ctx} -> "Your last transactions were for Nando's, Boots, Wetherspoons and Betfair."
     end
-    
+        
     Nexmo.send(number, teller_message)
     
     text(conn, "Done") 

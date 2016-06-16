@@ -11,10 +11,13 @@ defmodule Bankbot.Nexmo do
       "api_secret=#{nexmo_secret}",
       "to=#{to}",
       "from=#{phone_number}",
-      "text=#{msg}"
+      "text=#{URI.encode(msg)}"
     ]
 
     nexmo_url = "https://rest.nexmo.com/sms/json?" <> Enum.join(query, "&")
+    
+    Logger.info nexmo_url
+
 
     HTTPoison.start
     HTTPoison.get(nexmo_url)

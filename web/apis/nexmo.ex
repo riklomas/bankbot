@@ -15,9 +15,6 @@ defmodule Bankbot.Nexmo do
     ]
 
     nexmo_url = "https://rest.nexmo.com/sms/json?" <> Enum.join(query, "&")
-    
-    Logger.info nexmo_url
-
 
     HTTPoison.start
     HTTPoison.get(nexmo_url)

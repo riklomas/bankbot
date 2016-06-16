@@ -1,0 +1,38 @@
+body {
+  font: 16px/1.5 Helvetica;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 500px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+input {
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 7px;
+}
+
+.message {
+  float: left;
+  clear: both;
+  max-width: 300px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 0 0 3px 0;
+  padding: 10px 15px 10px 15px;
+}
+
+.message.teller {
+  float: right;
+  background: #2727e6;
+  color: white;
+}
